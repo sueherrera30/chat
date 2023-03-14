@@ -1,0 +1,25 @@
+@import '../../styles/variables.less';
+@import '../../styles/mixins.less';
+
+.chat {
+    .flex(100%, 50px, row,flex-start,center);
+		border-bottom: solid 0.5px @secodary;
+		padding: @baseSize;
+		&--img {
+			.userImageStyles(30px,30px, cover);
+			margin-right: @baseSize * 2;
+		}
+		&--texts {
+			font-size: @baseSize + 4;
+			& p {
+				font-weight: 600;
+				color: darken(@secodary, 30%);
+			}
+			& span {
+				font-size: @baseSize + 2;
+				white-space: nowrap;
+				overflow: hidden;
+				margin-right: @baseSize;
+			}
+		}
+}

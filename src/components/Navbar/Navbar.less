@@ -1,0 +1,25 @@
+@import '../../styles/variables.less';
+@import '../../styles/mixins.less';
+
+.navbar {
+    background-color: lighten(@primary, 15%);
+    min-height: 60px;
+    .flex(100%, 60px,row, unset, unset);
+    font-size: @baseSize + 4;
+    border-top-right-radius: @baseSize;
+    color: @light;
+    padding: @baseSize;
+}
+
+.title {
+    .flex(40%, 100%,row, flex-start, center);
+    text-transform: uppercase;
+    font-weight: 600;
+    height: auto;
+}
+.elements {
+    .flex(60%, 100%,row,flex-end, center);
+    & svg {
+        .iconStyles(25px, @secodary);
+    }
+}

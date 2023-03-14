@@ -1,0 +1,49 @@
+@import '../../styles/variables.less';
+@import '../../styles/mixins.less';
+
+.sidebar {
+    width: 30%;
+    background-color: lighten(@primary, 10%);
+    height: 100%;
+    border-radius: @baseSize 0 0 @baseSize;
+	overflow: scroll;
+}
+
+.header {
+	background-color: lighten(@primary, 20%);
+	.flex(100%, 60px,row, space-between, center);
+	border-top-left-radius: @baseSize;
+	padding: @baseSize;
+	&--title {
+		font-size: @baseSize + 8;
+		color: @light;
+		text-transform: uppercase;
+		width: 40%;
+		height: auto;
+		font-weight: 600;
+	}
+	&--elements {
+		height: unset;
+		.flex(60%, 100%,row, space-between, center);
+		& button {
+			.buttonStyles();
+		}
+	}
+	&--user {
+		height: auto;
+		.flex(60%, 100%,row, space-between, center);
+		&-img {
+			.userImageStyles(30px,30px, fill)
+		}
+		&-name {
+			font-size: @baseSize + 2;
+			height: auto;
+			color: @light;
+		}
+	}
+}
+
+.chats-container {
+	background-color: @light;
+	border-right: solid 1px @secodary;
+}

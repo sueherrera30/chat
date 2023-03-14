@@ -1,0 +1,47 @@
+// styles
+.flex(@width, @height, @direction,  @hirizontalDistribution, @verticalDistribution) {
+    display: flex;
+    width: @width;
+    height: @height;
+    flex-direction: @direction;
+    justify-content: @hirizontalDistribution;
+    align-items: @verticalDistribution;
+    
+}
+.iconStyles(@size, @color) {
+    font-size: @size;
+    margin: 0 @baseSize + 4;
+    color: @color;
+    cursor: pointer;
+}
+
+.buttonStyles() {
+    height: auto;
+    font-size: @baseSize + 4;
+    background-color: lighten(@primary, 50%);
+    width: auto;
+    padding: @baseSize;
+    border: none;
+    border-radius: @baseSize;
+    cursor: pointer;
+    font-size: @main;
+}
+
+.userImageStyles(@width, @height, @fit){
+    width: @width;
+    height: @height;
+    display: inline-block;
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: @fit;
+        border-radius: 50%;
+    }
+}
+
+// responsive
+.responsive(@maxWidth; @rules) {
+    @media only screen and (max-width: @maxWidth) {
+        @rules();
+    }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
-
-import './App.less';
+import Home from './pages/Home/Home';
+import './App.less'
 
 function App() {
   return (
     <div className="App">
-      <p>Hello chat!</p>
+     <Home />
     </div>
   );
 }

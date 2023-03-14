@@ -1,0 +1,47 @@
+@import '../../styles/variables.less';
+@import '../../styles/mixins.less';
+
+.message {
+    &-sent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: @baseSize *2;
+    min-height: 20px;
+    height: auto;
+        &--img {
+        .userImageStyles(25px,25px, fill);
+        margin-left: @baseSize *2;
+        }
+        &--text {
+            border-radius: @baseSize;
+            border-top-right-radius: 0px;
+            width: auto;
+            padding: @baseSize + 2;
+            background-color: @blue;
+            font-size: @baseSize + 2;
+            color: @light;
+        }
+    }
+
+    &-received {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding:@baseSize *2;
+        min-height: 20px;
+        height: auto;
+            &--img {
+            .userImageStyles(25px,25px, fill);
+            margin-right: @baseSize *2;
+            }
+            &--text {
+                border-radius: @baseSize;
+                border-top-left-radius: 0px;
+                width: auto;
+                padding: @baseSize + 2;
+                background-color: darken(@light, 5%);
+                font-size: @baseSize + 2;
+            }
+        }
+}

@@ -1,0 +1,19 @@
+@import '../../styles/variables.less';
+@import '../../styles/mixins.less';
+
+.home {
+  width: 1000px;
+  height: 700px;
+  border-radius: @baseSize;
+  display: flex;
+  .responsive(1024px, {
+    width: calc(100% - 150px);
+    height: calc(100% - 100px);
+});
+}
+
+.chat-side {
+  width: 70%;
+  height: 100%;
+  border-radius: 0 @baseSize  @baseSize 0;
+}
